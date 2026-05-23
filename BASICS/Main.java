@@ -2,27 +2,24 @@ package BASICS;
 
 public class Main {
     public static void main(String[] args) {
-        Cupboard cupboard = new Cupboard("Blue", 3);
-        System.out.println("Cupboard Color: " + cupboard.getColor());
-        System.out.println("Number of Shelves: " + cupboard.getShelves());
+        
+        Cupboard.show();
     }
 }
 
 
 class Cupboard {
-    private String color;
-    private int shelves;
+    static int shelfCount = 10;
+    static String color = "White";
+    static String[] TopSection = {"Daily", "Formal","Party"};
 
-    public Cupboard(String color, int shelves) {
-        this.color = color;
-        this.shelves = shelves;
-    }
+    static void show(){
 
-    public String getColor() {
-        return color;
-    }
+        System.out.println("This is a cupboard.");
+        System.out.println("Color: " + color);
+        System.out.println("Number of Shelves: " + shelfCount);
+        System.out.println("Top Section: " + String.join(", ", TopSection));
 
-    public int getShelves() {
-        return shelves;
     }
 }
+
